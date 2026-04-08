@@ -7,7 +7,7 @@ interface User
 
 interface Administrator extends User
 {
-	role: 'administrator';
+	role: 'admin';
 }
 
 function isAdmin(person: any) : person is Administrator
@@ -15,7 +15,7 @@ function isAdmin(person: any) : person is Administrator
 	return (person !== null) && (typeof person === 'object') && ('role' in person) && (person.role === 'admin');
 }
 
-function check(data : User)
+function check(data : User) : void
 {
 	if (isAdmin(data) === true)
 	{
@@ -23,6 +23,6 @@ function check(data : User)
 	}
 	else
 	{
-		console.log("Not an administrator!");
+		console.log("Not an administrator role!");
 	}
 }
