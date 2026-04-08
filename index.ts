@@ -25,7 +25,7 @@ function check(data : User)
 	}
 	else
 	{
-		console.log("Not an administrator!");
+		console.log("Not an administrator...........");
 	}
 }
 
